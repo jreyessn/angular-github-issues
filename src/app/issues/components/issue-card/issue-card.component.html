@@ -1,0 +1,40 @@
+<div class="flex flex-col shadow rounded-2xl overflow-hidden bg-card">
+    <div class="flex flex-col p-4">
+        <div class="h-48 text-ellipsis overflow-hidden">
+            <div class="mt-4 text-lg font-medium">
+    
+                <mat-icon class="text-xl cursor-pointer text-green-400" [matTooltip]="item.pull_request? 'Pull Request' : 'Repositorio'">
+                    {{ item.pull_request? 'account_tree' : 'check_circle'  }}
+                </mat-icon>
+                
+                <a [href]="item.html_url" target="_blank" class="text-blue-700">
+                    {{ item.title.length > 100? (item.title | slice:0:100) + '...' : item.title }}
+                </a>
+                <a [href]="item.html_url" target="_blank" class="text-gray-500">#{{ item.number }}</a>
+            </div>
+            <div class="mt-0.5 line-clamp-2 text-secondary">
+                <span class="text-gray-500">
+                    {{ item.repository_url | mapRepo }}
+                </span>
+            </div>
+            <div class="mt-1 line-clamp-2 text-secondary">
+                {{ item.body && item.body.length > 188? (item.body | slice:0:188) + '...' : item.body }}
+            </div>
+        </div>
+        <div class="w-full h-1 my-6 border-t-2"></div>
+
+        <div class="flex items-center leading-5 text-md text-secondary">
+            <mat-icon class="text-xl text-blue-500">calendar_today</mat-icon>
+            <div class="ml-1.5">{{ item.created_at | date:'dd/MM/yyyy' }}</div>
+        </div>
+        <div class="flex items-center leading-5 text-md text-secondary">
+            <mat-icon class="text-xl text-blue-500">person_outline</mat-icon>
+            <a [href]="item.user?.html_url" target="_blank" class="text-blue-700 ml-1.5">{{ item.user?.login || '' }}</a>
+        </div>
+        <div class="flex items-center leading-5 text-md text-secondary">
+            <mat-icon class="text-xl text-blue-500">lock_clock</mat-icon>
+            <div class="ml-1.5">{{ item.comments }} comments</div>
+        </div>
+
+    </div>
+</div>
