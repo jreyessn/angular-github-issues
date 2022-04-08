@@ -11,11 +11,6 @@ import { IssuesService } from '../../services/issues.service';
 export class IssuesListComponent {
 
   /**
-   * Limit records
-   */
-  limitRecords: number = 12;
-
-  /**
    * Data api
    */
   data$: Observable<Issue[]> = of([])
