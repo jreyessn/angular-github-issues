@@ -8,7 +8,7 @@
             <app-issue-search-field class="w-full" (search)="search($event)"></app-issue-search-field>
         </div>
         <div>
-            <span class="text-sm font-semibold">{{ total$ | async | number }} Issues</span>
+            <span id="count-issues" class="text-sm font-semibold">{{ total$ | async | number }} Issues</span>
         </div>
     </div>
 </div>

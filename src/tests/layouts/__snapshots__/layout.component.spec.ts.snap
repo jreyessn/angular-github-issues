@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutComponent Debe hacer el match con el snapshot 1`] = `
+<div
+  id="root1"
+>
+  <mat-toolbar
+    class="mat-toolbar mat-primary mat-toolbar-single-row"
+    color="primary"
+  >
+    <button
+      aria-label="icon-button with menu icon"
+      class="mat-focus-indicator mat-icon-button mat-button-base"
+      mat-icon-button=""
+    >
+      <span
+        class="mat-button-wrapper"
+      >
+        <mat-icon
+          aria-hidden="true"
+          class="mat-icon notranslate material-icons mat-icon-no-color"
+          data-mat-icon-type="font"
+          role="img"
+        >
+          search
+        </mat-icon>
+      </span>
+      <span
+        class="mat-ripple mat-button-ripple mat-button-ripple-round"
+        matripple=""
+      />
+      <span
+        class="mat-button-focus-overlay"
+      />
+    </button>
+    <span
+      class="mx-2"
+    >
+      Github Issues Search
+    </span>
+  </mat-toolbar>
+  <div
+    class="flex flex-col flex-auto p-6 sm:p-14"
+  >
+    <router-outlet />
+    
+  </div>
+</div>
+`;

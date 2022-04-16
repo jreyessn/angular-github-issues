@@ -1,4 +1,4 @@
-import { MapRepoPipe } from './map-repo.pipe';
+import { MapRepoPipe } from "../../../app/issues/pipes/map-repo.pipe";
 
 describe('MapRepoPipe', () => {
   it('create an instance', () => {
